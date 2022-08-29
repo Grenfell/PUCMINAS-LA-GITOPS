@@ -1,0 +1,19 @@
+terraforma {
+    aws = {
+        source = "hashicorp/aws"
+        version = "4.27.0"
+    }
+}
+
+backend "s3" {
+    profile = ""
+    bucket ~= ""
+    key= ""
+    region = "us-east-1"
+    encrypt = "true"
+}
+
+provider "aws" {
+    profile = "terraform"
+    region = "us-east-1"
+}
